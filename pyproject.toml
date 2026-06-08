@@ -1,11 +1,11 @@
 [project]
 name = "form-bot"
-version = "0.1.0"
+version = "1.0.0"
 description = "Discord Bot for creating interactive (Wynncraft-related) forms"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "aiohttp>=3.13.3",
+    "aiohttp>=3.14.1",
     "asyncpg>=0.31.0",
     "discord-py>=2.7.1",
 ]
@@ -13,9 +13,9 @@ dependencies = [
 [dependency-groups]
 dev = [
     "asyncpg-stubs>=0.31.2",
-    "mypy>=1.19.1",
+    "mypy>=2.1.0",
     "pre-commit>=4.6.0",
-    "ruff>=0.15.5",
+    "ruff>=0.15.16",
 ]
 
 [tool.ruff.lint]
