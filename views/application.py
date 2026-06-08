@@ -6,7 +6,7 @@ import asyncpg
 import discord
 from discord import ui
 
-from database.models import Form, Modal, Question
+from database.models import Form, Page, Question
 from utils.responses import respond_error, respond_success
 
 log = logging.getLogger(__name__)
@@ -14,7 +14,7 @@ log = logging.getLogger(__name__)
 
 class ApplicationView(ui.View):
     def __init__(
-        self, pool: asyncpg.Pool, form: Form, data: list[tuple[Modal, list[Question]]]
+        self, pool: asyncpg.Pool, form: Form, data: list[tuple[Page, list[Question]]]
     ) -> None:
         super().__init__(timeout=None)
         self.pool = pool
